@@ -1,0 +1,509 @@
+/*ESTILOS GENERALES */  
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+:root{
+  scroll-behavior: smooth; /*Con esta pseudoclase el scroll se desplaza lentamente más suave */ 
+}
+body{
+  /* font-family: 'Roboto', sans-serif;  */
+  font-family: 'Poppins', sans-serif;
+}
+
+/*HEADER > MENÚ DE NAVEGACIÓN */ 
+header::before{ 
+  content: "";
+  display: block;
+  margin-bottom: 55px;
+}
+nav{
+  width: 100%;
+  height: 55px; 
+  background: #000;  
+  border-bottom: 1px solid transparent;  
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2); 
+  position: fixed;  
+  top: 0;  
+  transition: ease-in-out .5s;  
+  z-index: 999;
+}
+nav .nav{
+  display: flex; 
+  justify-content: space-between; 
+  height: 55px; 
+  width: 100%; 
+  align-items: center; 
+  padding: 0 40px; 
+  /*border-bottom: 1px solid #fff ; */ 
+}
+nav .nav .logo{ 
+  height: 55px; 
+}
+nav .nav .logo img{
+  height: 100%; 
+  vertical-align: top; 
+}
+nav .nav .enlaces-header{
+  font-weight: 300;
+  transition: ease-in-out .5s;  
+}
+nav .nav .enlaces-header a{ 
+  position: relative;  
+  color: #fff;
+  text-decoration: none; 
+  margin-left: 20px;
+  font-size: 16.5px; 
+}
+nav .nav .enlaces-header a::after{
+  content: '';
+  position: absolute;
+  background-color: #ff3c78;
+  height: 3px;
+  width: 0; 
+  left: 0; 
+  bottom: -4px; 
+  /* transition: 0.3s; */ 
+}
+nav .nav .enlaces-header a:hover::after{
+  width: 100%; 
+}
+
+/*HEADER > PRESENTACIÓN */ 
+header{
+  height: 100vh;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url(../img/heder-fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /*Con el valor fixed, el background no se mueve, se queda fijo aunque muevas el scrollbar */
+  background-position: center;
+} 
+.presentacion{
+  width: 100%;
+  position: absolute;
+  top: 125px;
+  display: flex;
+  justify-content: center;
+}  
+.presentacion .presentacion-contenedor{
+  width: 80%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.presentacion .presentacion-contenedor .presentacion-foto{
+  padding: 10px 80px 10px 10px; 
+}
+.presentacion .presentacion-contenedor .presentacion-foto img{
+  height: 225px; 
+  border-radius: 50%;  
+}
+.presentacion .presentacion-contenedor .presentacion-texto{
+  padding: 10px 10px 36px 10px; 
+  color: #fff;  
+  line-height: 1.27;
+  font-size: 30px; 
+}
+.presentacion .presentacion-contenedor .presentacion-texto h3{
+  font-weight: bolder;
+}
+
+/*SOBRE MI */ 
+.sobre-mi{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 55px; 
+  /* border-top: 1px solid #000; */
+  /* border-bottom: 1px solid #000; */
+} 
+.sobre-mi .sobre-mi-texto{
+  width: 40%;
+} 
+.sobre-mi .sobre-mi-texto h2{
+  padding-bottom: 33px;   
+  font-size: 26px; 
+}
+.sobre-mi .sobre-mi-texto p{
+  line-height: 1.3;
+  padding-bottom: 30px;
+  font-size: 22px; 
+  width: 80%; 
+}
+.sobre-mi .sobre-mi-texto a{
+  margin: 38px 0 0 0;
+  width: 130px;
+  display: inline-block;
+  background: #1FDE82;
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  text-decoration: none; 
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 8px 32px rgba(31, 222, 130, .46); 
+}
+.sobre-mi .sobre-mi-tecnologias{
+  width: 40%;
+  padding-left: 38px; 
+}
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-texto{ 
+  padding-bottom: 32px; 
+}
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-texto h2{ 
+  font-size: 26px; 
+}
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%; 
+  padding-bottom: 30px;
+  line-height: 2.5; 
+}
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas img{
+  width: 75px;
+  padding: 0px 4px 4px 4px; 
+}
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas p{
+  font-size: 12px; 
+  text-shadow: #000 8px 5px 10px; 
+}
+
+/*PORTAFOLIO */ 
+.portafolio{
+  width: 100%;
+  height: 110vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px; 
+  /* padding-bottom: 140px; */ /*Este padding no me afecta en nada, por eso lo comenté, pero lo dejo de referencia */
+  /* border-top: 1px solid #000 ; */
+  /* border-bottom: 1px solid #000 ; */ 
+}  
+.portafolio .portafolio-texto{ 
+  width: 80%;
+  padding-bottom: 33px;
+}
+.portafolio .portafolio-texto h2{
+  font-size: 26px; 
+}
+.portafolio .portafolio-proyectos{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}  
+.portafolio .portafolio-proyectos .proyectos{ /**/
+  width: 30%;
+  margin-right: 3.3%;
+  margin-bottom: 26px;
+  position: relative; /**/
+}
+.portafolio .portafolio-proyectos .proyectos img{
+  width: 100%;
+  border-radius: 10px;
+  border: 0.5px solid lightslategray; 
+}
+.portafolio .portafolio-proyectos .proyectos .proyectos-hover{ /**/ /*.proyectos, sin hover */ 
+  position: absolute; /**/ 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0); /**/
+  transition: transform .5s; /**/
+  background: hsl(0deg 0% 0% / 68%); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.portafolio .portafolio-proyectos .proyectos:hover .proyectos-hover{ /**/ /*.proyectos:hover, con hover */ 
+  transform: scale(1); /**/
+}
+.portafolio .portafolio-proyectos .proyectos .proyectos-hover .sitio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 28px 25px 28px; 
+}
+.portafolio .portafolio-proyectos .proyectos .proyectos-hover .sitio a img{
+  width: 50px; 
+  border: none; 
+  border-radius: 0; 
+  background: #fff;
+}
+.portafolio .portafolio-proyectos .proyectos .proyectos-hover .sitio p{
+  color: #fff;  
+  margin-top: 7px; 
+}
+
+/*CONTACTO */ 
+footer{
+  padding-top: 55px; 
+}
+.contacto{
+  height: 95vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+  /* border-top: 1px solid #000; */ 
+} 
+.contacto .contacto-texto{ 
+  width: 80%;
+  padding-bottom: 45px;
+} 
+.contacto .contacto-texto h2{
+  font-size: 26px; 
+} 
+.contacto .contacto-medios{
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap;  
+  justify-content: space-around;
+  padding-top: 40px; 
+  margin-bottom: 150px; 
+} 
+.contacto .contacto-medios .contacto-medio{  
+  width: 130px;
+  padding: 0px 10px;
+} 
+.contacto .contacto-medios .contacto-medio img{ 
+  width: 100%; 
+  padding: 15px; 
+  cursor: pointer;
+  transform: scale(1); 
+  transition: transform 1s; 
+} 
+.contacto .contacto-medios .contacto-medio img:hover{ 
+  transform: scale(2); 
+} 
+.contacto .contacto-copyright{
+  padding-bottom: 30px;
+}
+.contacto .contacto-copyright p{
+  text-shadow: #000 8px 5px 10px; 
+}
+.contacto .contacto-imagen-final-bye{
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  background-color: black;
+  padding: 10px 0;
+} 
+.contacto .contacto-imagen-final-bye img{
+  width: 130px; 
+} 
+
+
+/*MEDIA QUERIES  */ 
+@media (max-width: 992px) and (min-width: 768px) { 
+  /*HEADER > MENÚ DE NAVEGACIÓN */ 
+  nav .nav .enlaces-header a {  
+    font-size: 18px; 
+  }  
+  /*HEADER > PRESENTACIÓN */ 
+  .presentacion { 
+    top: 155px;
+  }  
+  .presentacion .presentacion-contenedor .presentacion-foto { 
+    padding: 10px 30px 10px 20px; 
+    margin-left: 15px;
+  }
+  .presentacion .presentacion-contenedor .presentacion-texto { 
+    font-size: 31px; 
+    padding: 10px 0px 36px 30px; 
+  }
+  /*SOBRE MI */ 
+  .sobre-mi .sobre-mi-texto p { 
+    font-size: 24px;
+  }
+  .sobre-mi .sobre-mi-texto a { 
+    padding: 13px 0;
+    font-size: 17px;
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas { 
+    margin-right: 0px; /*Esto se puede eliminar ya que se hereda de los estilos principales */ 
+    width: 33%; /*Esto se puede eliminar ya que se hereda de los estilos principales */ 
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas:nth-child(3), 
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor  div:nth-child(6) { 
+    margin-right: 0px;  
+  }
+  /*PORTAFOLIO */ 
+  .portafolio .portafolio-proyectos .proyectos { 
+    width: 32%;
+    margin-right: 2%;
+  } 
+  .portafolio .portafolio-proyectos .proyectos:nth-child(3),
+  .portafolio .portafolio-proyectos  div:nth-child(6) { 
+    margin-right: 0px; 
+  } 
+  /*CONTACTO */ 
+  .contacto .contacto-medios .contacto-medio img:hover { 
+    transform: scale(1.8); 
+  } 
+  .contacto .contacto-copyright p { 
+    font-size: 17px; 
+  } 
+    
+}
+
+@media (max-width: 767px) and (min-width: 576px) { 
+  /*HEADER > MENÚ DE NAVEGACIÓN */ 
+  nav .nav .enlaces-header a {  
+    font-size: 18px; 
+  }  
+  /*HEADER > PRESENTACIÓN */ 
+  .presentacion { 
+    top: 115px;
+  }  
+  .presentacion .presentacion-contenedor .presentacion-foto {
+    padding: 10px 25px 10px 20px;
+  }
+  .presentacion .presentacion-contenedor .presentacion-foto img {
+    height: 220px; 
+  }
+  .presentacion .presentacion-contenedor .presentacion-texto {
+    font-size: 26px;
+    padding: 9px 0px 36px 0px;
+    margin-left: 20px;
+  }
+  /*SOBRE MI */ 
+  .sobre-mi .sobre-mi-texto p { 
+    font-size: 21px;
+    width: 89%;
+  }
+  .sobre-mi .sobre-mi-texto a {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+  .sobre-mi .sobre-mi-tecnologias {
+    padding-left: 35px;
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas { 
+    width: 50%; 
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas img { 
+    width: 75px; 
+    padding: 0px 8px 8px 8px;
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas p {
+    font-size: 11px; 
+  }
+  /*PORTAFOLIO */ 
+  .portafolio .portafolio-proyectos .proyectos .proyectos-hover .sitio {
+    margin: 5px 24px 25px 24px; 
+  }
+  .portafolio .portafolio-proyectos .proyectos .proyectos-hover .sitio a img {
+    width: 35px; 
+  }
+  .portafolio .portafolio-proyectos .proyectos .proyectos-hover .sitio p { 
+    font-size: 13px; 
+  }
+  /*CONTACTO */ 
+  .contacto .contacto-medios {
+    padding-top: 0px; 
+    margin-bottom: 100px; 
+  }
+  .contacto .contacto-imagen-final-bye img {
+    width: 120px;
+  }
+  
+}
+
+@media (max-width: 575px) and (min-width: 350px) {
+  /*HEADER > MENÚ DE NAVEGACIÓN */ 
+  nav .nav { 
+    padding: 0px 30px; 
+  }
+  nav .nav .enlaces-header a { 
+    font-size: 16px; 
+    margin-left: 16px; 
+  } 
+  /*HEADER > PRESENTACIÓN */ 
+  .presentacion { 
+    top: 120px; 
+  }  
+  .presentacion .presentacion-contenedor .presentacion-foto { 
+    margin-left: 0px; 
+  }
+  .presentacion .presentacion-contenedor .presentacion-foto img { 
+    height: 190px; 
+  }
+  .presentacion .presentacion-contenedor .presentacion-texto { 
+    font-size: 22px;
+    margin-left: 0px;
+    padding: 12px 0px 30px 0px;
+  }
+  /*SOBRE MI */ 
+  .sobre-mi .sobre-mi-texto p {
+    font-size: 17.1px; 
+    width: 95%;
+  }
+  .sobre-mi .sobre-mi-texto a {    
+    width: 115px; 
+    font-size: 14px; 
+    padding: 11px 0;  
+  }
+  .sobre-mi .sobre-mi-tecnologias { 
+    padding-left: 35px;
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas { 
+    width: 50%;
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas img { 
+    width: 65px; 
+    padding: 0px 6px 6px 6px;
+  }
+  .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas p { 
+    font-size: 10px;
+  } 
+  /*PORTAFOLIO */ 
+  .portafolio .portafolio-proyectos .proyectos { /*1, 3, 5, 7 */ 
+    width: 46%; 
+    margin-right: 4%; 
+  }
+  .portafolio .portafolio-proyectos .proyectos:nth-child(2),
+  .portafolio .portafolio-proyectos .proyectos:nth-child(4),
+  .portafolio .portafolio-proyectos .proyectos:nth-child(6),
+  .portafolio .portafolio-proyectos .proyectos:nth-child(8) {
+    margin-right: 0px; 
+  } 
+  /*CONTACTO */ 
+  .contacto .contacto-medios .contacto-medio img{
+    padding: 12px; 
+  }
+  
+} 
+
+@media (max-width: 349px) and (min-width: 150px) {
+  /* Este seria el breackpoint mas pequeño ;)  */ 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
