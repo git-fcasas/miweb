@@ -59,8 +59,8 @@ nav .nav .enlaces-header a{
 nav .nav .enlaces-header a::after{
   content: '';
   position: absolute;
-  /* background-color: #ff3c78; */
-  background-color: #1FDE82; 
+  background-color: #ff3c78; 
+  /* background-color: #1FDE82;  */
   height: 3px;
   width: 0; 
   left: 0; 
