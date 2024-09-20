@@ -174,11 +174,11 @@ header{
   /* justify-content: center; */
   align-items: center;
   width: 33%; 
-  padding-bottom: 30px;
+  padding-bottom: 45px;
   line-height: 2.5; 
 }
 .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .grupo-de-filas .filas img{
-  width: 55px;
+  width: 65px;
   padding: 0px 4px 4px 4px; 
 }
 .sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .grupo-de-filas .filas p{
