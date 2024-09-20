@@ -161,20 +161,27 @@ header{
   display: flex;
   flex-wrap: wrap;
 }
-.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas{
+
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .grupo-de-filas{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .grupo-de-filas .filas{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   width: 33%; 
   padding-bottom: 30px;
   line-height: 2.5; 
 }
-.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas img{
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .grupo-de-filas .filas img{
   width: 75px;
   padding: 0px 4px 4px 4px; 
 }
-.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .filas p{
+.sobre-mi .sobre-mi-tecnologias .sobre-mi-tecnologias-contenedor .grupo-de-filas .filas p{
   font-size: 12px; 
   text-shadow: #000 8px 5px 10px; 
 }
