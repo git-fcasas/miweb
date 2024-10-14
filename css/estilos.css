@@ -287,7 +287,8 @@ footer{
   margin-bottom: 150px;
 }
 .contacto .contacto-medios .contacto-medio{
-  width: 130px;
+  /* width: 130px; */
+  width: 115px; 
   padding: 0px 10px;
 }
 .contacto .contacto-medios .contacto-medio img{
