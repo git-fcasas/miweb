@@ -317,7 +317,8 @@ footer{
   padding: 10px 0;
 }
 .contacto .contacto-imagen-final-bye img{
-  width: 130px;
+  /* width: 130px;  */
+  width: 120px; 
 }
 
 
